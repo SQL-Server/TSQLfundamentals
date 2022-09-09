@@ -2,8 +2,25 @@
 USE MASTER
 GO
 
+
+IF DB_ID('testDatabase') IS NOT NULL
+DROP DATABASE testDatabase;
+PRINT 'Base de datos encontrada y eliminada'
+GO
+
+IF DB_ID('testDatabase') IS NULL
+CREATE DATABASE testDatabase
+PRINT 'Se ha creado la base de datos testDatabase'
+GO
+
+USE testDatabase;
+
 /* Crear base de datos */
 CREATE DATABASE testDatabase
+GO
+
+IF OBJECT_ID(N'testDatabase') IS NULL
+CREATE DATABASE testDatabase 
 GO
 
 /* Eliminar base de datos */
