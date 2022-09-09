@@ -2,29 +2,16 @@
 USE MASTER
 GO
 
-
+/* Validar si existe una base de datos y eliminarla */
 IF DB_ID('testDatabase') IS NOT NULL
 DROP DATABASE testDatabase;
 PRINT 'Base de datos encontrada y eliminada'
 GO
 
+/* Validar si existe una base de datos, si no existe crea la base de datos */
 IF DB_ID('testDatabase') IS NULL
 CREATE DATABASE testDatabase
 PRINT 'Se ha creado la base de datos testDatabase'
-GO
-
-USE testDatabase;
-
-/* Crear base de datos */
-CREATE DATABASE testDatabase
-GO
-
-IF OBJECT_ID(N'testDatabase') IS NULL
-CREATE DATABASE testDatabase 
-GO
-
-/* Eliminar base de datos */
-DROP DATABASE testDatabase
 GO
 
 /* Poner en uso la base de datos */
