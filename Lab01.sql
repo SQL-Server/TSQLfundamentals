@@ -1,5 +1,13 @@
+/* Poner en uso base de datos MASTER */
+USE MASTER
+GO
+
 /* Crear base de datos */
 CREATE DATABASE testDatabase
+GO
+
+/* Eliminar base de datos */
+DROP DATABASE testDatabase
 GO
 
 /* Poner en uso la base de datos */
