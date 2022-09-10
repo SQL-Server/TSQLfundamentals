@@ -1,1 +1,2 @@
 # TSQLfundamentals
+Paso a paso
